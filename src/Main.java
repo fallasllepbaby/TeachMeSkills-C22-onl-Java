@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        getData();
+        //getData();
+        convertCharToInt();
     }
 
     public static void getData(){
@@ -29,4 +30,13 @@ public class Main {
         System.out.println("Height: " + height);
         System.out.println("Weight: " + weight);
     }
+
+    public static void convertCharToInt(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter char: ");
+        char symbol = scanner.next().charAt(0);
+        System.out.println(symbol + "-" + (int) symbol);
+    }
+
 }
