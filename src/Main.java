@@ -1,9 +1,11 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         //getData();
-        convertCharToInt();
+        //convertCharToInt();
+        countBMI();
     }
 
     public static void getData(){
@@ -39,4 +41,17 @@ public class Main {
         System.out.println(symbol + "-" + (int) symbol);
     }
 
+    // BMI (Body Mass Index)
+    public static void countBMI(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your weight: ");
+        float weight = scanner.nextFloat();
+
+        System.out.print("Enter your height: ");
+        float height = scanner.nextFloat();
+
+        float bmi = (float) (weight / Math.pow(height / 100, 2));
+        System.out.print("BMI = " + String.format("%.2f", bmi));
+    }
 }
