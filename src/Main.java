@@ -2,8 +2,10 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         getMonthByNumber();
+        getSum();
     }
 
     // Method to return scanner
@@ -11,18 +13,11 @@ public class Main {
         return new Scanner(System.in);
     }
 
-    // Additional task
+    // Additional task (Months)
     public static void getMonthByNumber() {
-        int month = 0;
-        boolean check = true;
-        /*
-        do {
-            System.out.print("Enter number of month: ");
-            month = scan().nextInt();
-        } while (!(month > 0 && month < 13));
-        */
+
         System.out.print("Enter number of month: ");
-        month = scan().nextInt();
+        int month = scan().nextInt();
 
         switch (month){
             case 1:
@@ -65,4 +60,20 @@ public class Main {
                 System.out.println("There is no such month in the year!");
         }
     }
+
+    // Additional task using loop
+    public static void getSum(){
+        int sum = 0;
+        int number;
+        do {
+            System.out.print("Enter number: ");
+            number = scan().nextInt();
+        } while(!(number > 1));
+
+        for(int i = 1; i < number; i++){
+            sum += i;
+        }
+        System.out.println(sum);
+    }
+
 }
