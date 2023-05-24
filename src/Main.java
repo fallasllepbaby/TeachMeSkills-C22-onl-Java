@@ -1,8 +1,6 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Scanner;
 
-public class Tester {
+public class Main {
     public static void main(String[] args) {
         // Control Structures
 
@@ -40,6 +38,18 @@ public class Tester {
 
         // Task 6
         printSquares();
+
+        // Additional tasks
+
+        // Task 1 (Fibonacci)
+        printFibonacci();
+
+        // Task 2
+        getFinalDepositAmount();
+
+        // Task 3
+        printTable();
+
     }
 
     public static Scanner scan(){
@@ -181,6 +191,45 @@ public class Tester {
         System.out.println("Вывести на экран квадраты чисел от 10 до 20 включительно");
         for (int i = 10; i <= 20; i++) {
             System.out.println(i + " --> " + i*i);
+        }
+    }
+
+    // Additional tasks
+
+    // Task 1 (Fibonacci)
+    public static void printFibonacci() {
+        int first = 1, second = 1, third = 0;
+        System.out.println("11 elements of Fibonacci: ");
+        System.out.print(first + " " + second + " ");
+        for(int i = 3; i <= 11; i++) {
+            third = first + second;
+            System.out.print(third + " ");
+            first = second;
+            second = third;
+        }
+        System.out.println();
+    }
+
+    // Task 2
+    public static void getFinalDepositAmount() {
+        System.out.print("Enter deposit amount: ");
+        float depositAmount = scan().nextFloat();
+        System.out.print("Enter amount of months: ");
+        int months = scan().nextInt();
+        for(int i = 0; i < months; i++) {
+            depositAmount *= 1.07;
+        }
+        System.out.println("Final deposit amount = " + depositAmount);
+    }
+
+    // Task 3
+    public static void printTable() {
+        System.out.println("Table: ");
+        for(int i = 1; i <= 10; i++) {
+            for(int n = 1; n <= 10; n++) {
+                System.out.print(n + " * " + i + " = " + n*i + "    ");
+            }
+            System.out.println();
         }
     }
 }
