@@ -7,30 +7,30 @@ public class Main {
         // Main tasks
 
         // Task 0
-//        System.out.println(hasNumber());
+        System.out.println(hasNumber());
 
         // Task 1
         System.out.println(deleteAllMatches());
 
         // Task 2
-//        System.out.println(getRandomArray());
+        System.out.println(getRandomArray());
 
         // Task 3
-//        System.out.println(getTwoRandomArrays());
+        System.out.println(getTwoRandomArrays());
 
         // Additional tasks
 
         // Task 4
-//        System.out.println(getRestrictedRandomArray());
+        System.out.println(getRestrictedRandomArray());
 
         // Task 5
-//        getOddArray();
+        getOddArray();
 
         // Task 6
-//        sortNamesArray();
+        sortNamesArray();
 
         // Task 7
-//        sortUsingBubbles();
+        sortUsingBubbles();
     }
 
     public static Scanner scan(){
