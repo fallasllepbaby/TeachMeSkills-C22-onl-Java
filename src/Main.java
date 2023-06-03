@@ -12,8 +12,10 @@ public class Main {
         // Task 2
         //createChessBoard();
 
+        // Additional tasks
+
         // Task 3
-        //multiplyTwoArrays();
+        multiplyTwoArrays();
 
         // Task 4
         //sumAllElementsOfArray();
@@ -121,26 +123,84 @@ public class Main {
     }
 
     // Task 3
-//    public static void multiplyTwoArrays(){
-//        int[][] firstArray = new int[][] {{1,0,0,0},{0,1,0,0},{0,0,0,0}};
-//        System.out.println(Arrays.deepToString(firstArray));
-//        int[][] secondArray = new int[][]  {{1,2,3},{1,1,1},{0,0,0},{2,1,0}};
-//        System.out.println(Arrays.deepToString(secondArray));
-//        int[][] result = new int[firstArray.length][secondArray[0].length];
-//
-//        for(int outer = 0; outer < firstArray.length; outer++){
-//            for(int inner = 0; inner < secondArray[outer].length; inner++){
-//                result[outer][inner] = firstArray[outer][inner] * secondArray[outer][inner] + firstArray[outer][inner + 1] * secondArray[outer + 1][inner] + firstArray[outer][inner + 2] * secondArray[outer + 2][inner] + firstArray[outer][inner + 3] * secondArray[outer + 3][inner];
-//            }
-//        }
-//
-//        for(int outer[] : result){
-//            for(int inner : outer){
-//                System.out.print(inner + "\t");
-//            }
-//            System.out.println();
-//        }
-//    }
+    public static void multiplyTwoArrays(){
+        // First array
+        System.out.print("Enter amount of row in first array: ");
+        int rows1 = scan().nextInt();
+        System.out.print("Enter amount of columns in first array: ");
+        int columns1 = scan().nextInt();
+
+        int[][] array1 = new int[rows1][columns1];
+        for(int outer = 0; outer < array1.length; outer++){
+            for(int inner = 0; inner < array1[outer].length; inner++){
+                array1[outer][inner] = (int) Math.floor(Math.random() * 3);
+            }
+        }
+
+        // Second array
+        System.out.print("Enter amount of row in second array: ");
+        int rows2 = scan().nextInt();
+        System.out.print("Enter amount of columns in second array: ");
+        int columns2 = scan().nextInt();
+
+        int[][] array2 = new int[rows2][columns2];
+        for(int outer = 0; outer < array2.length; outer++){
+            for(int inner = 0; inner < array2[outer].length; inner++){
+                array2[outer][inner] = (int) Math.floor(Math.random() * 3);
+            }
+        }
+
+        System.out.println("First matrix");
+        for(int[] outer : array1){
+            for(int inner : outer){
+                System.out.print(inner + "\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        System.out.println("Second matrix");
+        for(int[] outer : array2){
+            for(int inner : outer){
+                System.out.print(inner + "\t");
+            }
+            System.out.println();
+        }
+
+        // Check possibility to multiply arrays
+        if(columns1 != rows2){
+            System.out.println();
+            System.out.println("You can't multiply these matrix");
+            return;
+        }
+
+        // Initialization final array
+        int[][] resultArray = new int[rows1][columns2];
+
+        // Multiply matrix
+        int sum = 0;
+        for (int outer = 0; outer < resultArray.length; outer++){
+            for(int inner = 0; inner < resultArray[outer].length; inner++){
+                for(int rows = 0, columns = 0; rows < array1.length - 1; rows++, columns++){
+                    sum += array1[outer][columns] * array2[rows][inner];
+                }
+                resultArray[outer][inner] = sum;
+                sum = 0;
+            }
+        }
+
+        System.out.println();
+
+        System.out.println("Result matrix");
+        for(int[] outer : resultArray){
+            for(int inner : outer){
+                System.out.print(inner + "\t");
+            }
+            System.out.println();
+        }
+
+    }
 
     // Task 4
     public static void sumAllElementsOfArray() {
