@@ -7,10 +7,10 @@ public class Main {
         // Main tasks
 
         // Task 1
-        //createTripleArray();
+        createTripleArray();
 
         // Task 2
-        //createChessBoard();
+        createChessBoard();
 
         // Additional tasks
 
@@ -18,13 +18,13 @@ public class Main {
         multiplyTwoArrays();
 
         // Task 4
-        //sumAllElementsOfArray();
+        sumAllElementsOfArray();
 
         // Task 5
-        //getDiagonalsOfArray();
+        getDiagonalsOfArray();
 
         // Task 6
-        //sortRowsOfArray();
+        sortRowsOfArray();
     }
 
     public static Scanner scan(){
