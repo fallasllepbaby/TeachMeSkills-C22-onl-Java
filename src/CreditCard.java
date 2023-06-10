@@ -21,6 +21,8 @@ public class CreditCard {
 
     }
 
+
+
     public double getSumOnAccountNumber() {
         return sumOnAccountNumber;
     }
@@ -36,6 +38,8 @@ public class CreditCard {
     public void setSumOnAccountNumber(double sumOnAccountNumber) {
         this.sumOnAccountNumber = sumOnAccountNumber;
     }
+
+
 
     public void addMoneyOnAccountNumber(double money){
         this.sumOnAccountNumber = this.sumOnAccountNumber + money;
