@@ -1,15 +1,13 @@
 import DocumentAccountingSystem.*;
-import DocumentAccountingSystem.Documents.Document;
-import DocumentAccountingSystem.Documents.EmployeeContract;
-import DocumentAccountingSystem.Documents.FinancialInvoice;
-import DocumentAccountingSystem.Documents.SupplyOfGoodsContract;
+import DocumentAccountingSystem.Documents.*;
+import Figures.*;
+import Positions.*;
 
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 
-        /*
         // Main tasks
 
         // Task 1
@@ -29,6 +27,7 @@ public class Main {
         }
 
         System.out.println("Сумма периметров всех фигур в массиве - " + perimeterSum);
+        System.out.println();
 
         // Task 2
 
@@ -38,8 +37,7 @@ public class Main {
         accountant.printPosition();
         Position worker = new Worker();
         worker.printPosition();
-
-        */
+        System.out.println();
 
         // Additional task
 
