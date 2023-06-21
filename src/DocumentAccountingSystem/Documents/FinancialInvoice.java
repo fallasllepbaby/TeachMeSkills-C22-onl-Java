@@ -1,8 +1,11 @@
-package DocumentAccountingSystem;
+package DocumentAccountingSystem.Documents;
+
+import DocumentAccountingSystem.Documents.Document;
+import DocumentAccountingSystem.Info;
 
 import java.util.Date;
 
-public class FinancialInvoice extends Document implements Info{
+public class FinancialInvoice extends Document implements Info {
     private int monthTotal;
     private int departmentCode;
 

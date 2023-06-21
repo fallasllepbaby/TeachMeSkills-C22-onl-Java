@@ -1,5 +1,7 @@
 package DocumentAccountingSystem;
 
+import DocumentAccountingSystem.Documents.Document;
+
 public class Register {
 
     private int counter = 0;

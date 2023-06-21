@@ -1,4 +1,7 @@
-package DocumentAccountingSystem;
+package DocumentAccountingSystem.Documents;
+
+import DocumentAccountingSystem.Documents.Document;
+import DocumentAccountingSystem.Info;
 
 import java.util.Date;
 

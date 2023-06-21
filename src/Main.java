@@ -1,12 +1,8 @@
 import DocumentAccountingSystem.*;
-import Figures.Circle;
-import Figures.Figure;
-import Figures.Rectangle;
-import Figures.Triangle;
-import Positions.Accountant;
-import Positions.Director;
-import Positions.Position;
-import Positions.Worker;
+import DocumentAccountingSystem.Documents.Document;
+import DocumentAccountingSystem.Documents.EmployeeContract;
+import DocumentAccountingSystem.Documents.FinancialInvoice;
+import DocumentAccountingSystem.Documents.SupplyOfGoodsContract;
 
 import java.util.Date;
 

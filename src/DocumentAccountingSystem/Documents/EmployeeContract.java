@@ -1,8 +1,11 @@
-package DocumentAccountingSystem;
+package DocumentAccountingSystem.Documents;
+
+import DocumentAccountingSystem.Documents.Document;
+import DocumentAccountingSystem.Info;
 
 import java.util.Date;
 
-public class EmployeeContract extends Document implements Info{
+public class EmployeeContract extends Document implements Info {
     private String name;
     private Date contractEndDate;
 
