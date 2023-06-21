@@ -1,3 +1,4 @@
+import DocumentAccountingSystem.*;
 import Figures.Circle;
 import Figures.Figure;
 import Figures.Rectangle;
@@ -7,9 +8,12 @@ import Positions.Director;
 import Positions.Position;
 import Positions.Worker;
 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
 
+        /*
         // Main tasks
 
         // Task 1
@@ -39,9 +43,23 @@ public class Main {
         Position worker = new Worker();
         worker.printPosition();
 
+        */
+
         // Additional task
 
         // Task 3
 
+        Register register = new Register();
+
+        Document supplyContract = new SupplyOfGoodsContract(123, new Date(), "books", 33);
+        Document employeeContract = new EmployeeContract(122, new Date(), "Piter", new Date());
+        Document financialInvoice = new FinancialInvoice(121, new Date(), 3000, 23);
+
+        register.addDocument(supplyContract);
+        register.addDocument(employeeContract);
+        register.addDocument(financialInvoice);
+
+        register.getDocumentInformation(0);
+        register.getDocumentInformation(2);
     }
 }
