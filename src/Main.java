@@ -2,6 +2,10 @@ import Figures.Circle;
 import Figures.Figure;
 import Figures.Rectangle;
 import Figures.Triangle;
+import Positions.Accountant;
+import Positions.Director;
+import Positions.Position;
+import Positions.Worker;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +30,14 @@ public class Main {
 
         System.out.println("Сумма периметров всех фигур в массиве - " + perimeterSum);
 
-        // Task 2 (using interface = skip)
+        // Task 2
+
+        Position director = new Director();
+        director.printPosition();
+        Position accountant = new Accountant();
+        accountant.printPosition();
+        Position worker = new Worker();
+        worker.printPosition();
 
         // Additional task
 
