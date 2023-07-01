@@ -1,3 +1,6 @@
+import AdditionalTask.LoginPassword;
+import AdditionalTask.WrongLoginException;
+import AdditionalTask.WrongPasswordException;
 import MainTask.ContainsAbcException;
 import MainTask.DocumentString;
 import MainTask.EndsWith1a2bException;
@@ -5,11 +8,11 @@ import MainTask.StartsWith555Exception;
 
 public class Main {
     public static void main(String[] args) {
+
         // Main tasks
 
         // Task 1
-
-
+/*
         String str = "1234-aic-5678-efg-1a2b";
 
         DocumentString.showTwoDigitBlocks(str);
@@ -37,6 +40,25 @@ public class Main {
         } catch (EndsWith1a2bException exception) {
             exception.getMessage();
         }
+
+ */
+
+        // Additional tasks
+
+        // Task 1
+
+        String login = "danik Laparevich";
+        String password = "qwerty";
+        String confirmPassword = "qwerty";
+
+        try {
+            System.out.println(LoginPassword.checkLoginAndPassword(login,password,confirmPassword));
+        } catch (WrongLoginException exception) {
+            exception.getMessage();
+        } catch (WrongPasswordException exception) {
+            exception.getMessage();
+        }
+
 
     }
 }
