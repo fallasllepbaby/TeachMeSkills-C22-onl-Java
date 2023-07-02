@@ -12,7 +12,7 @@ public class Main {
         // Main tasks
 
         // Task 1
-/*
+
         String str = "1234-aic-5678-efg-1a2b";
 
         DocumentString.showTwoDigitBlocks(str);
@@ -41,22 +41,23 @@ public class Main {
             exception.getMessage();
         }
 
- */
+
 
         // Additional tasks
 
         // Task 1
 
-        String login = "danik Laparevich";
-        String password = "qwerty";
-        String confirmPassword = "qwerty";
+        String login = "danikLaparevich";
+        String password = "qwerty24";
+        String confirmPassword = "qwerty24";
 
         try {
             System.out.println(LoginPassword.checkLoginAndPassword(login,password,confirmPassword));
         } catch (WrongLoginException exception) {
-            exception.getMessage();
+            System.out.println(exception.getMessage());
+
         } catch (WrongPasswordException exception) {
-            exception.getMessage();
+            System.out.println(exception.getMessage());
         }
 
 
