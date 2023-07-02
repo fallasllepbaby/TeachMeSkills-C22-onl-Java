@@ -1,0 +1,2 @@
+contract12345678 - incorrect length!
+contrac12345678 - should start with docnum or contract!
